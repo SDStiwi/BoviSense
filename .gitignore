@@ -1,0 +1,26 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Node.js dependencies and build output
+node_modules/
+dist/
+
+# PlatformIO
+.pio/
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

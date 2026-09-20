@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-marker div {
+  transition: transform 0.2s ease;
+}
+
+.custom-marker div:hover {
+  transform: scale(1.2);
+}
+
+.custom-popup .leaflet-popup-content-wrapper {
+  @apply rounded-xl dark:bg-gray-900 dark:text-white border-none shadow-xl;
+}
+
+.custom-popup .leaflet-popup-tip {
+  @apply dark:bg-gray-900;
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: 0;
+}

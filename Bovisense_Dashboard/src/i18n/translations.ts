@@ -1,0 +1,213 @@
+export type Language = 'en' | 'ar';
+
+export const translations = {
+  en: {
+    // App
+    appName: 'BoviSense',
+    tagline: 'Smart Cattle Health Monitoring System',
+
+    // Navigation
+    dashboard: 'Dashboard',
+    alerts: 'Alerts',
+    map: 'Map',
+    logout: 'Logout',
+
+    // Dashboard
+    cattleDashboard: 'Cattle Dashboard',
+    monitoringHealth: 'Monitoring health across all farms',
+    grid: 'Grid',
+    totalDevices: 'Total Devices',
+    onlineDevices: 'Online Devices',
+    alerts1h: 'Alerts (1h)',
+    avgHealthScore: 'Avg Rule-Based Health Score',
+    devices: 'Devices',
+    recentAlerts: 'Recent Alerts',
+    viewAll: 'View all',
+    noAlerts: 'No alerts in the last hour',
+
+    // Device
+    temp: 'Temp',
+    bpm: 'BPM',
+    spo2: 'SpO2',
+    movement: 'Movement',
+    temperature: 'Temperature',
+    heartRate: 'Heart Rate',
+    bloodOxygen: 'Blood Oxygen',
+    movementActivity: 'Movement Activity',
+    accelerometer: 'Accelerometer (G)',
+    deviceAlerts: 'Device Alerts',
+    noDeviceAlerts: 'No alerts found for this device in the last 48 hours',
+    deviceNotFound: 'Device Not Found',
+    backToDashboard: 'Back to Dashboard',
+    seen: 'Seen',
+    currentVitals: 'Current Vitals',
+    telemetryHistory: 'Telemetry History',
+    latestReadings: 'Latest Readings',
+    deviceNotFoundDescription: 'The requested device could not be found.',
+bodyTemperature: 'Body Temperature',
+motionData: 'Motion data from the monitored device',
+deviceAlerts48h: 'Device Alerts (48h)',
+activity: 'activity',
+    // Alerts Page
+    systemAlerts: 'System Alerts',
+    reviewHealth: 'Review health and connectivity issues',
+    last6h: 'Last 6 hours',
+    last24h: 'Last 24 hours',
+    last48h: 'Last 48 hours',
+    last7d: 'Last 7 days',
+    noAlertsFound: 'No alerts found',
+    adjustFilter: 'Try adjusting your time filter',
+    type: 'Type',
+    device: 'Device',
+    message: 'Message',
+    value: 'Value',
+    timestamp: 'Timestamp',
+
+    // Map
+    liveMap: 'Live Map',
+    alertsCount: 'Alerts',
+    viewDetails: 'View Details',
+
+    // Login
+    signIn: 'Sign in to Dashboard',
+    username: 'Username',
+    password: 'Password',
+    invalidCredentials: 'Invalid credentials',
+    demoCreds: 'Demo credentials available in the project documentation.',
+    email: 'Email',
+    emailPlaceholder: 'farmer@example.com',
+
+    // Status
+    online: 'online',
+    offline: 'offline',
+    healthy: 'healthy',
+    warning: 'warning',
+    critical: 'critical',
+
+    // Common
+    loading: 'Loading...',
+    lastUpdated: 'Last updated',
+    years: 'years',
+    kg: 'kg',
+    g: 'G',
+    cow: 'Cow',
+    farm: 'Farm',
+    status: 'Status',
+    healthScore: 'Health Score',
+    alertsLabel: 'Alerts',
+    details: 'Details',
+    close: 'Close',
+    cancel: 'Cancel',
+    confirm: 'Confirm',
+    error: 'Error',
+    success: 'Success',
+    noData: 'No data available',
+    noTelemetry: 'No telemetry data available',
+    time: 'Time',
+    date: 'Date',
+  },
+
+  ar: {
+    // App
+    appName: 'BoviSense',
+    tagline: 'نظام ذكي لمراقبة الماشية',
+
+    // Navigation
+    dashboard: 'لوحة التحكم',
+    alerts: 'التنبيهات',
+    map: 'الخريطة',
+    logout: 'تسجيل الخروج',
+
+    // Dashboard
+    cattleDashboard: 'لوحة تحكم الماشية',
+    monitoringHealth: 'مراقبة الصحة عبر جميع المزارع',
+    grid: 'شبكة',
+    totalDevices: 'إجمالي الأجهزة',
+    onlineDevices: 'الأجهزة المتصلة',
+    alerts1h: 'التنبيهات (ساعة واحدة)',
+    avgHealthScore: 'متوسط درجة الصحة المبنية على القواعد',
+    devices: 'الأجهزة',
+    recentAlerts: 'التنبيهات الأخيرة',
+    viewAll: 'عرض الكل',
+    noAlerts: 'لا توجد تنبيهات في الساعة الماضية',
+
+    // Device
+    temp: 'الحرارة',
+    bpm: 'النبض',
+    spo2: 'الأكسجين',
+    movement: 'الحركة',
+    temperature: 'درجة الحرارة',
+    heartRate: 'معدل ضربات القلب',
+    bloodOxygen: 'الأكسجين في الدم',
+    movementActivity: 'نشاط الحركة',
+    accelerometer: 'مقياس التسارع (G)',
+    deviceAlerts: 'تنبيهات الجهاز',
+    noDeviceAlerts: 'لا توجد تنبيهات لهذا الجهاز في آخر 48 ساعة',
+    deviceNotFound: 'الجهاز غير موجود',
+    backToDashboard: 'العودة إلى لوحة التحكم',
+    seen: 'شوهد',
+    currentVitals: 'القياسات الحالية',
+    telemetryHistory: 'سجل القياسات',
+    latestReadings: 'أحدث القراءات',
+
+    // Alerts Page
+    systemAlerts: 'تنبيهات النظام',
+    reviewHealth: 'مراجعة مشاكل الصحة والاتصال',
+    last6h: 'آخر 6 ساعات',
+    last24h: 'آخر 24 ساعة',
+    last48h: 'آخر 48 ساعة',
+    last7d: 'آخر 7 أيام',
+    noAlertsFound: 'لا توجد تنبيهات',
+    adjustFilter: 'حاول تعديل الفترة الزمنية',
+    type: 'النوع',
+    device: 'الجهاز',
+    message: 'الرسالة',
+    value: 'القيمة',
+    timestamp: 'الوقت',
+
+    // Map
+    liveMap: 'الخريطة المباشرة',
+    alertsCount: 'التنبيهات',
+    viewDetails: 'عرض التفاصيل',
+
+    // Login
+    signIn: 'تسجيل الدخول إلى لوحة التحكم',
+    username: 'اسم المستخدم',
+    password: 'كلمة المرور',
+    invalidCredentials: 'بيانات الدخول غير صحيحة',
+    demoCreds: 'بيانات الدخول التجريبية متوفرة في وثائق المشروع.',
+    email: 'البريد الإلكتروني',
+    emailPlaceholder: 'farmer@example.com',
+
+    // Status
+    online: 'متصل',
+    offline: 'غير متصل',
+    healthy: 'سليم',
+    warning: 'تحذير',
+    critical: 'حرج',
+
+    // Common
+    loading: 'جاري التحميل...',
+    lastUpdated: 'آخر تحديث',
+    years: 'سنوات',
+    kg: 'كجم',
+    g: 'G',
+    cow: 'بقرة',
+    farm: 'المزرعة',
+    status: 'الحالة',
+    healthScore: 'درجة الصحة',
+    alertsLabel: 'التنبيهات',
+    details: 'التفاصيل',
+    close: 'إغلاق',
+    cancel: 'إلغاء',
+    confirm: 'تأكيد',
+    error: 'خطأ',
+    success: 'نجاح',
+    noData: 'لا توجد بيانات متاحة',
+    noTelemetry: 'لا توجد بيانات قياس متاحة',
+    time: 'الوقت',
+    date: 'التاريخ',
+  },
+};
+
+export type TranslationKey = keyof typeof translations.en;
