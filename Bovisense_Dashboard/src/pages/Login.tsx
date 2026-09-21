@@ -3,8 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { LanguageToggle } from '../components/LanguageToggle';
-import { Lock, Mail, AlertCircle, Moon, Sun } from 'lucide-react';
+import { Lock, Mail, AlertCircle, Moon, Sun, Sparkles } from 'lucide-react';
 import logo from '../assets/logo.png';
+
+const DEMO_EMAIL = 'demo@bovisense.local';
+const DEMO_PASSWORD = 'demo123';
 
 const Login = () => {
   const { login } = useAuth();
@@ -15,6 +18,12 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const handleDemoLogin = () => {
+    setEmail(DEMO_EMAIL);
+    setPassword(DEMO_PASSWORD);
+    setError('');
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,7 +74,7 @@ const Login = () => {
       {/* Login card */}
       <div className="relative z-10 w-full max-w-md">
         <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-xl border border-gray-200/70 dark:border-gray-800 p-8 sm:p-10">
-          
+
           {/* Logo and branding */}
           <div className="text-center mb-8">
             <div className="mx-auto mb-5 w-20 h-20 rounded-2xl bg-green-50 dark:bg-green-900/20 flex items-center justify-center overflow-hidden">
@@ -93,6 +102,37 @@ const Login = () => {
                 <span>{error}</span>
               </div>
             )}
+
+            {/* Demo Access */}
+            <div className="rounded-xl border border-green-200 dark:border-green-800 bg-green-50/70 dark:bg-green-900/10 p-4">
+              <div className="flex items-center justify-between gap-3 mb-3">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-green-600 dark:text-green-400" />
+                  <span className="text-sm font-semibold text-green-800 dark:text-green-300">
+                    Demo Access
+                  </span>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={handleDemoLogin}
+                  className="text-xs font-semibold text-green-700 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 underline underline-offset-2"
+                >
+                  Use demo credentials
+                </button>
+              </div>
+
+              <div className="space-y-1 text-xs text-green-700 dark:text-green-400">
+                <p>
+                  <span className="font-medium">Email:</span>{' '}
+                  {DEMO_EMAIL}
+                </p>
+                <p>
+                  <span className="font-medium">Password:</span>{' '}
+                  {DEMO_PASSWORD}
+                </p>
+              </div>
+            </div>
 
             {/* Email */}
             <div>
@@ -169,4 +209,3 @@ const Login = () => {
 };
 
 export default Login;
-
