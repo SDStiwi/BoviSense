@@ -95,21 +95,15 @@ const Login = () => {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
-            {/* Error */}
-            {error && (
-              <div className="flex items-start gap-3 px-4 py-3 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-400 text-sm">
-                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>{error}</span>
-              </div>
-            )}
 
             {/* Demo Access */}
             <div className="rounded-xl border border-green-200 dark:border-green-800 bg-green-50/70 dark:bg-green-900/10 p-4">
               <div className="flex items-center justify-between gap-3 mb-3">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-green-600 dark:text-green-400" />
+
                   <span className="text-sm font-semibold text-green-800 dark:text-green-300">
-                    Demo Access
+                    {t('demoAccess')}
                   </span>
                 </div>
 
@@ -118,21 +112,30 @@ const Login = () => {
                   onClick={handleDemoLogin}
                   className="text-xs font-semibold text-green-700 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 underline underline-offset-2"
                 >
-                  Use demo credentials
+                  {t('useDemoCredentials')}
                 </button>
               </div>
 
               <div className="space-y-1 text-xs text-green-700 dark:text-green-400">
                 <p>
-                  <span className="font-medium">Email:</span>{' '}
+                  <span className="font-medium">{t('email')}:</span>{' '}
                   {DEMO_EMAIL}
                 </p>
+
                 <p>
-                  <span className="font-medium">Password:</span>{' '}
+                  <span className="font-medium">{t('password')}:</span>{' '}
                   {DEMO_PASSWORD}
                 </p>
               </div>
             </div>
+
+            {/* Error */}
+            {error && (
+              <div className="flex items-start gap-3 px-4 py-3 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-400 text-sm">
+                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <span>{error}</span>
+              </div>
+            )}
 
             {/* Email */}
             <div>
