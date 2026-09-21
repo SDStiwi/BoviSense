@@ -76,6 +76,10 @@ activity: 'activity',
     demoCreds: 'Demo credentials available in the project documentation.',
     email: 'Email',
     emailPlaceholder: 'farmer@example.com',
+    demoAccess: 'Demo Access',
+    useDemoCredentials: 'Use demo credentials',
+    demoEmail: 'Email',
+    demoPassword: 'Password',
 
     // Status
     online: 'online',
@@ -178,6 +182,10 @@ activity: 'activity',
     demoCreds: 'بيانات الدخول التجريبية متوفرة في وثائق المشروع.',
     email: 'البريد الإلكتروني',
     emailPlaceholder: 'farmer@example.com',
+    demoAccess: 'الدخول التجريبي',
+    useDemoCredentials: 'استخدام بيانات الدخول التجريبية',
+    demoEmail: 'البريد الإلكتروني',
+    demoPassword: 'كلمة المرور',
 
     // Status
     online: 'متصل',
