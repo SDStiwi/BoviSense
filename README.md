@@ -169,6 +169,8 @@ Field testing was performed with the BoviSense prototype under real cattle condi
 
 * [Field Test Video ](https://drive.google.com/file/d/1APICbSTNjFOJPU-BNR09dIqQldkBMbr6/view?usp=drive_link)
 * [Demo Video ](https://drive.google.com/file/d/1ZAl4-MwL44KO83ORRnd4-DGKMr8z8PPN/view?usp=drive_link)
+* **[Open BoviSense Dashboard](https://bovi-sense-xi.vercel.app/)**
+
 
 ## Prototype Status
 
